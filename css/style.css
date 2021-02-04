@@ -1,18 +1,15 @@
 table{
     margin-top: 25px;
     width: 100%;
-    border: 1px solid teal;
+    border: 1px solid black;
 }
 td{
-    border: 1px solid teal;
+    border: 1px solid black;
 }
 .main-container{
     margin: 0 auto;
-   
-    /* padding: 30px; */
     width: 400px; 
     margin: 0 auto;
-    /* height: 100px; */
     text-align: center;
    
 }
