@@ -4,22 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
-    <h1>Add books to read</h1>
-    <form class="js-form form">
-      <div class="input-container">
-        <label
-          >Book name <input type="text" name="Book name " class="input" />
-        </label>
+    <div class="main-container">
+    <div class="container">
+    
+      <h1 class="text-title">Add books to read</h1>
+      <form>
+        <label class="text">Name
+        <input type="text" id="input_name" class="input book-name"/></label>
         <br />
-
-        <label>Book author<input type="text" name="Book author" /> </label>
-      </div>
-      <br />
-      <div class="category-container">
-        <select name="Book genres">
+        <label class="text">Author
+        <input type="text" id="input_author" class="input inpt-author book-author"/></label>
+        <br />
+        <label class="text">Select category
+          <select name="category" id="category" class="select" size="0">
           <option>criminal</option>
           <option>sci-fi</option>
           <option>fantasy</option>
@@ -27,40 +31,48 @@
           <option>drama</option>
           <option>science</option>
         </select>
-      </div>
-      <br />
-
-      <div class="priority-container">
-        <b>Priority</b>
-        <label>
-          <input type="radio" name="Priority" value="1" />
-          1
         </label>
-        <label>
-          <input type="radio" name="Priority" value="2" />
-          2
+          <br />
         </label>
-        <label>
-          <input type="radio" name="Priority" value="3" />
-          3
-        </label>
-        <label>
-          <input type="radio" name="Priority" value="4" />
-          4
-        </label>
-        <label>
-          <input type="radio" name="Priority" value="5" />
-          5
-        </label>
-      </div>
-      <br />
-      <div class="button-container">
-        <button type="submit" class="add-btn">add</button>
-        <button type="submit" class="delete-btn">delete</button>
-      </div>
-
-      <ol class="todo-list"></ol>
-    </form>
-    <script src="index.js"></script>
+        <div class="priority-container">
+        <b class="text text-prt">Priority</b>
+          <label class="text-number">
+            <input type="radio" name="priority" value="1" />
+            1
+          </label>
+          <label class="text-number">
+            <input type="radio" name="priority" value="2" />
+            2
+          </label>
+          <label class="text-number">
+            <input type="radio" name="priority" value="3" />
+            3
+          </label>
+          <label class="text-number">
+            <input type="radio" name="priority" value="4" />
+            4
+          </label>
+        
+          <label class="text-number">
+            <input type="radio" name="priority" value="5" />
+            5
+          </label>
+        </div>
+        <br />
+        <button type="button" class="add_btn btn">add</button>
+        <button type="button"  class="remove_btn btn">delete</button>
+      </form>
+       </div>
+      <table id="table" cellspacing='0'>
+<tr>
+  <td>№</td>
+  <td>Name</td>
+  <td>Author</td>
+  <td>Category</td>
+  <td>Priority</td>
+</tr>
+      </table>
+    </div>
+    <script src="main.js"></script>
   </body>
 </html>
