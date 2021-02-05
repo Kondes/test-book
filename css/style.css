@@ -14,10 +14,10 @@ td {
   /* background-color: teal; */
 }
 .container {
-  background-image: url(../image/library.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   font-family: Yusei Magic;
+  background-image: url(../image/library.jpg);
 }
 
 .text-title {
