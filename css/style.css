@@ -1,69 +1,66 @@
-table{
-    margin-top: 25px;
-    width: 100%;
-    border: 1px solid black;
+table {
+  margin-top: 25px;
+  width: 100%;
+  border: 1px solid black;
 }
-td{
-    border: 1px solid black;
+td {
+  border: 1px solid black;
 }
-.main-container{
-    margin: 0 auto;
-    width: 400px; 
-    margin: 0 auto;
-    text-align: center;
-   
+.main-container {
+  margin: 0 auto;
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  /* background-color: teal; */
 }
-.container{
-    background-image: url(../image/library.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    font-family: Yusei Magic;
+.container {
+  background-image: url(/image/library.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-family: Yusei Magic;
 }
 
-  .text-title {
-    margin-top: 0;
-    color: rgb(42, 165, 93);
-  }
-  .text {
-    font-size: 25px;
-    color: rgb(244, 247, 248);
-  }
-  
-  .input {
-    border-radius: 10px 10px 10px 10px;
-    width: 200px;
-    height: 30px;
-    margin-left: 25px;
-    border: 2px solid rgb(0, 128, 122);
-  }
-  
-  .inpt-author {
-    margin-top: 10px;
-    margin-left: 15px;
-  }
-  .select {
-    border-radius: 10px 10px 10px 10px;
-    width: 80px;
-    height: 30px;
-    border: 2px solid rgb(0, 128, 128);
-    margin-right: 85px;
-  }
-  .priority-container {
-    /* margin-left: 10px; */
-  }
-  .text-prt {
-    /* margin-right: 70px; */
-    font-size: 25px;
-    color: rgb(244, 247, 248);
-  }
-  .text-number {
-    color: cyan;
-  }
-  
-  .btn {
-    border: 3px solid rgb(0, 128, 90);
-    width: 80px;
-    height: 30px;
-    margin-bottom: 15px;
-  }
-  
+.text-title {
+  margin-top: 0;
+  color: rgb(42, 165, 93);
+}
+.text {
+  font-size: 25px;
+  color: rgb(244, 247, 248);
+}
+
+.input {
+  border-radius: 10px 10px 10px 10px;
+  width: 200px;
+  height: 30px;
+  margin-left: 25px;
+  border: 2px solid rgb(0, 128, 122);
+}
+
+.inpt-author {
+  margin-top: 10px;
+  margin-left: 15px;
+}
+.select {
+  border-radius: 10px 10px 10px 10px;
+  width: 80px;
+  height: 30px;
+  border: 2px solid rgb(0, 128, 128);
+  margin-right: 85px;
+}
+
+.text-prt {
+  font-size: 25px;
+  color: rgb(244, 247, 248);
+}
+.text-number {
+  color: cyan;
+}
+
+.btn {
+  border: 3px solid rgb(0, 128, 90);
+  width: 80px;
+  height: 30px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}

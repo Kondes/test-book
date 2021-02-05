@@ -3,43 +3,51 @@ const inputName = document.querySelector("#input_name");
 const inputAuthor = document.querySelector("#input_author");
 const tableRef = document.querySelector("#table");
 const categoryRef = document.querySelector("#category");
-const removeRef = document.querySelector(".remove_btn");
-let priority = document.getElementsByName("priority");
-let counter = 0;
+const priorityRef = document.querySelector("#priority");
 
-addButton.onclick = () => {
-    
-  counter++;
-  let newRow = document.createElement("tr");
-  newRow.classList.add("js-newRow" + counter);
-  let newNumber = document.createElement("td");
+const startTableRef = `<tr>
+  <td>№</td>
+  <td>Name</td>
+  <td>Author</td>
+  <td>Category</td>
+  <td>Priority</td>
+  <tr>`;
 
-  let newColumnName = document.createElement("td");
-  let newColumnAuthor = document.createElement("td");
-  let newColumnCategory = document.createElement("td");
-  let newColumnPriority = document.createElement("td");
+tableRef.innerHTML = startTableRef;
 
-  for (let i = 0; i < priority.length; i++) {
-    if (priority[i].checked) {
-      newColumnPriority.innerHTML = priority[i].value;
-    }
-  }
+const library = [];
 
-  newNumber.innerHTML = counter;
-  newColumnName.innerHTML = inputName.value;
-  newColumnAuthor.innerHTML = inputAuthor.value;
-  newColumnCategory.innerHTML = categoryRef.value;
-
-  newRow.appendChild(newNumber);
-  newRow.appendChild(newColumnName);
-  newRow.appendChild(newColumnAuthor);
-  newRow.appendChild(newColumnCategory);
-  newRow.appendChild(newColumnPriority);
-  tableRef.appendChild(newRow);
+const removeBtn = (index) => {
+  library.splice(index, 1);
+  paintElem();
 };
 
-removeRef.onclick = () => {
-  let newRow = document.querySelector(".js-newRow" + counter);
-  tableRef.removeChild(newRow);
-  counter--;
+function paintElem() {
+  tableRef.innerHTML = startTableRef;
+  library.map((obj, index) => {
+    tableRef.innerHTML += `
+<td>${index + 1}</td>
+<td>${obj.name}</td>
+<td>${obj.author}</td>
+<td>${obj.category}</td>
+<td>${obj.priority}</td>
+
+<td><button onclick='removeBtn(${index})'>delete</button></td>`;
+  });
+}
+
+addButton.onclick = () => {
+  let obj = {
+    name: inputName.value,
+    author: inputAuthor.value,
+    category: categoryRef.value,
+    priority: priorityRef.value,
+  };
+
+  library.push(obj);
+
+  paintElem();
+
+  inputName.value = "";
+  inputAuthor.value = "";
 };
